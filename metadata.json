@@ -1,0 +1,8 @@
+{
+  "name": "The Deck - AI Tactical Fitness",
+  "description": "A gamified, military-style deck of cards workout app featuring AI coaching and simulated computer vision HUD.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
