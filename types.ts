@@ -22,6 +22,8 @@ export interface Card {
 }
 
 export interface WorkoutStats {
+  id: string;
+  date: number;
   totalReps: number;
   duration: number; // seconds
   repsByExercise: Record<ExerciseType, number>;
