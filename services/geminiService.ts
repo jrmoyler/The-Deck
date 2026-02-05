@@ -1,10 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 import { WorkoutStats } from "../types";
 
-const apiKey = process.env.API_KEY || '';
-
 // Initialize only if key exists to prevent crash on load
 const getAI = () => {
+    const apiKey = process.env.API_KEY || '';
     if (!apiKey) {
         console.warn("Gemini API Key missing.");
         return null;
