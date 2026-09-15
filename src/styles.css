@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c0d0b;
+  --color-surface: #161814;
+  --color-surface-2: #1e211c;
+  --color-fg: #f2eadb;
+  --color-muted: #9a9588;
+  --color-faint: #6d6a62;
+  --color-border: #2a2d27;
+  --color-border-strong: #3c4038;
+  --color-accent: #f2eadb;
+  --color-accent-fg: #14120e;
+  --color-crimson: #b42332;
+  --color-ink: #14120e;
+  --color-felt: #121510;
+
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+@layer base {
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-fg);
+    outline-offset: 3px;
+  }
+}
+
+.felt {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(242, 234, 219, 0.05), transparent 55%),
+    radial-gradient(circle at 1px 1px, rgba(242, 234, 219, 0.035) 1px, transparent 0);
+  background-size: auto, 18px 18px;
+}
+
+.card-back-pattern {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(242, 234, 219, 0.05) 10px,
+      rgba(242, 234, 219, 0.05) 11px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(242, 234, 219, 0.05) 10px,
+      rgba(242, 234, 219, 0.05) 11px
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playing-card {
+    transition: none;
+  }
+}

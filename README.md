@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# The Deck
 
-# Run and deploy your AI Studio app
+A 52-card bodyweight workout. Each suit is one movement. The rank is the reps. Tap every rep so the log stays honest.
 
-This contains everything you need to run your app locally.
+No camera. No fake form score. No API key required.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1YN2p7PaTu5bxfeKPXHriBlABuYfVZXSc
+## How it works
 
-## Run Locally
+| Suit | Default movement |
+| --- | --- |
+| Hearts | Push-ups |
+| Diamonds | Squats |
+| Spades | Sit-ups |
+| Clubs | Burpees |
 
-**Prerequisites:**  Node.js
+- **Standard scoring:** face cards 10, ace 11
+- **Full deck:** 52 cards
+- **Half deck:** 26 cards
+- **Single suit:** 13 cards of one movement
 
+Map suits to other movements, change scoring, and set rest in settings. History lives in this browser only.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Run
+
+```bash
+npm install
+npm run dev
+```
+
+```bash
+npm test
+npm run build
+```
